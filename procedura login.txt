@@ -1,0 +1,5 @@
+create or replace procedure auth_user(user in varchar2,pass in varchar2,result out integer)
+is
+begin
+select count(*) into result from users where username = user and password = pass ;
+end;
